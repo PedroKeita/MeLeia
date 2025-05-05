@@ -29,7 +29,7 @@ tasks.withType<JavaCompile> {
 
 application {
     mainModule.set("com.meleia.meleia")
-    mainClass.set("com.meleia.meleia.HelloApplication")
+    mainClass.set("com.meleia.meleia.MeLeiaMainApplication")
 }
 
 javafx {
@@ -38,6 +38,13 @@ javafx {
 }
 
 dependencies {
+
+
+
+    // Dependência do Spring Boot para rodar a aplicação no mesmo contexto
+
+
+
     implementation("org.controlsfx:controlsfx:11.2.1")
     implementation("com.dlsc.formsfx:formsfx-core:11.6.0") {
         exclude(group = "org.openjfx")
