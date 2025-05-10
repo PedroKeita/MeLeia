@@ -1,4 +1,4 @@
-package com.meleia.meleia.user;
+package com.meleia.meleia.model.user;
 
 public enum UsuarioRole {
 

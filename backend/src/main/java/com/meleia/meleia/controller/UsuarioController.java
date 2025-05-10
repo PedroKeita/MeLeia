@@ -1,4 +1,4 @@
 package com.meleia.meleia.controller;
 
-public class UserController {
+public class UsuarioController {
 }

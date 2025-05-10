@@ -23,6 +23,10 @@ dependencies {
 
     implementation("org.postgresql:postgresql")
 
+    implementation("org.springframework.boot:spring-boot-starter")
+
+
+
     implementation("org.springframework.boot:spring-boot-starter-jdbc")
     implementation("com.h2database:h2")
     implementation("org.springframework.boot:spring-boot-starter-validation")
@@ -32,6 +36,10 @@ dependencies {
 
     implementation("org.springframework.boot:spring-boot-starter-security")
 
+    //JWT
+    implementation("com.auth0:java-jwt:4.5.0")
+
+    implementation("io.github.cdimascio:java-dotenv:5.2.2")
 
     //Implementações baseadas em teste
     testImplementation("org.springframework.boot:spring-boot-starter-test")

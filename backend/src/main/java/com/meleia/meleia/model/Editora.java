@@ -3,6 +3,7 @@ package com.meleia.meleia.model;
 import jakarta.persistence.*;
 
 import java.util.List;
+/*
 
 @Entity
 public class Editora {
@@ -14,6 +15,7 @@ public class Editora {
     private String telefone;
     private String email;
 
-    @OneToMany(mappedBy = "Livro")
+    @OneToMany(mappedBy = "livro")
     private List<Livro> livros;
 }
+*/

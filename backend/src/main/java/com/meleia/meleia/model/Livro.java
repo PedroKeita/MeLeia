@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 import java.util.Date;
 
-@Entity
+/*@Entity
 public class Livro {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,4 +25,4 @@ public class Livro {
     @JoinColumn(name="editora_id")
     private Editora editora;
 
-}
+}*/
