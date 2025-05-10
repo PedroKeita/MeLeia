@@ -28,6 +28,8 @@ bin/
 !**/src/main/**/bin/
 !**/src/test/**/bin/
 
+/backend/.env/
+/home/pedro/projetos/MeLeia/backend/.env
 ### NetBeans ###
 /nbproject/private/
 /nbbuild/
