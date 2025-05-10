@@ -1,52 +1,45 @@
 plugins {
-    id("org.springframework.boot") version "3.2.5"
-    id("io.spring.dependency-management") version "1.1.4"
-    java
+    id("org.springframework.boot") version "3.4.5"
+    id("io.spring.dependency-management") version "1.0.15.RELEASE"
+    kotlin("jvm") version "1.6.10"
+    kotlin("plugin.spring") version "1.6.10"
+
 }
 
 group = "com.MeLeia"
 version = "0.0.1-SNAPSHOT"
 
-java {
-    sourceCompatibility = JavaVersion.VERSION_17
-    targetCompatibility = JavaVersion.VERSION_17
-}
+
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    // Spring Boot dependencies
 
-
-   // implementation 'org.springframework.boot:spring-boot-starter-validation' // Para validações
-    //implementation 'org.springframework.boot:spring-boot-starter-security'  // Para autenticação e autorização
-    implementation ("org.springframework.boot:spring-boot-starter-thymeleaf")  // Se usar Thymeleaf para views
-
-
-    implementation ("org.postgresql:postgresql") // Para PostgreSQL (substitua se usar outro banco)
-
-
-
-    implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
-
-    // Spring Boot Web
     implementation("org.springframework.boot:spring-boot-starter-web")
-
-    // Spring Boot JPA
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+    implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
 
-    // PostgreSQL
-    runtimeOnly("org.postgresql:postgresql")
+    implementation("org.postgresql:postgresql")
 
-    // .env support (dotenv-java)
-    implementation("io.github.cdimascio:dotenv-java:3.0.0")
+    implementation("org.springframework.boot:spring-boot-starter-jdbc")
+    implementation("com.h2database:h2")
+    implementation("org.springframework.boot:spring-boot-starter-validation")
 
-    // Spring Boot Test
+    compileOnly("org.projectlombok:lombok:1.18.38")
+    annotationProcessor("org.projectlombok:lombok:1.18.38")
+
+    implementation("org.springframework.boot:spring-boot-starter-security")
+
+
+    //Implementações baseadas em teste
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+    testImplementation("org.springframework.security:spring-security-test")
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
 tasks.withType<Test> {
     useJUnitPlatform()
 }
+
