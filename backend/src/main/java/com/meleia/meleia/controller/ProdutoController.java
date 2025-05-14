@@ -13,9 +13,10 @@ import org.springframework.web.bind.annotation.*;
 public class ProdutoController {
 
     private final ProdutoRepository produtoRepository;
+
     @Autowired
-    public ProdutoController(ProdutoRepository produtoRepository, ProdutoRepository produtoRepository1) {
-        this.produtoRepository = produtoRepository1;
+    public ProdutoController(ProdutoRepository produtoRepository) {
+        this.produtoRepository = produtoRepository;
     }
 
     @PostMapping

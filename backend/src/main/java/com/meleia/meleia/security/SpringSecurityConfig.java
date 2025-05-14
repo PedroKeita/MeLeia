@@ -30,6 +30,21 @@ public class SpringSecurityConfig {
                 .authorizeHttpRequests(authorize -> authorize
                         .requestMatchers(HttpMethod.POST,"/auth/login").permitAll()
                         .requestMatchers(HttpMethod.POST,"/auth/registro").permitAll()
+                        .requestMatchers(HttpMethod.GET,"/livro/**").permitAll()
+
+                        .requestMatchers(HttpMethod.GET,"/editora/**").permitAll()
+                        .requestMatchers(HttpMethod.POST,"/editora/**").permitAll()
+
+                        .requestMatchers(HttpMethod.GET,"/autor/**").permitAll()
+                        .requestMatchers(HttpMethod.POST,"/autor/**").permitAll()
+
+                        .requestMatchers(HttpMethod.GET,"/categoria/**").permitAll()
+                        .requestMatchers(HttpMethod.POST,"/categoria/**").permitAll()
+
+
+                        .requestMatchers(HttpMethod.POST,"/usuario/**").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.PUT,"/usuario/**").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.DELETE,"/usuario/**").hasRole("ADMIN")
                         .requestMatchers(HttpMethod.POST,"/produto").hasRole("ADMIN")
                         .anyRequest().authenticated()
                 )
