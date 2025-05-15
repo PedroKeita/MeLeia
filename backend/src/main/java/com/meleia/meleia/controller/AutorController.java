@@ -1,15 +1,11 @@
 package com.meleia.meleia.controller;
 
 import com.meleia.meleia.model.Autor;
-import com.meleia.meleia.model.Livro;
 import com.meleia.meleia.repositories.AutorRepository;
-import com.meleia.meleia.repositories.LivroRepository;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("autor")

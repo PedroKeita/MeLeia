@@ -1,16 +1,11 @@
 package com.meleia.meleia.controller;
 
 import com.meleia.meleia.model.Livro;
-import com.meleia.meleia.model.Produto;
 import com.meleia.meleia.repositories.LivroRepository;
-import com.meleia.meleia.repositories.ProdutoRepository;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("livro")
